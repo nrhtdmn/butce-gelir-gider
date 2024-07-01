@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddIncomeExpenseDialog</class>
+ <widget class="QDialog" name="AddIncomeExpenseDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</x>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gelir/Gider Ekle</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kategori:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="category_combobox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</x>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tutar:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="amount_input">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</x>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>130</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tür:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="type_combobox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</x>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Gelir</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Gider</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="add_btn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>200</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ekle</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

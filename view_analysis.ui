@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnalysisDialog</class>
+ <widget class="QDialog" name="AnalysisDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</x>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Analiz Görüntüle</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Analiz:</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="analysis_table">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</x>
+      <width>540</width>
+      <height>250</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

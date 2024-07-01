@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateCategoryDialog</class>
+ <widget class="QDialog" name="CreateCategoryDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</x>
+    <width>400</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kategori Oluştur</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kategori Adı:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="category_name_input">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</x>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_btn">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</x>
+      <width>100</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ekle</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

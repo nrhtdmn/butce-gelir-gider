@@ -1,0 +1,12 @@
+budget_tracker/
+├── main.py
+├── ui/
+│   ├── main_window.ui
+│   ├── add_income_expense.ui
+│   ├── create_category.ui
+│   ├── view_analysis.ui
+├── database/
+│   └── budget.db
+├── resources/
+│   ├── styles.qss
+│   └── icons/

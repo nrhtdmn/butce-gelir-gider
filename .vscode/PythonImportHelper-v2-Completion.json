@@ -1,0 +1,113 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDialog",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "uic",
+        "importPath": "PyQt5.QtWidgets",
+        "description": "PyQt5.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt5.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "loadUi",
+        "importPath": "PyQt5.uic",
+        "description": "PyQt5.uic",
+        "isExtraImport": true,
+        "detail": "PyQt5.uic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BudgetTracker",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class BudgetTracker(QMainWindow):\n    def __init__(self):\n        super(BudgetTracker, self).__init__()\n        loadUi('ui/main_window.ui', self)\n        self.initUI()\n    def initUI(self):\n        self.loadCategories()\n        self.loadTransactions()\n        self.add_income_expense_btn.clicked.connect(self.showAddIncomeExpenseDialog)\n        self.create_category_btn.clicked.connect(self.showCreateCategoryDialog)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "AddIncomeExpenseDialog",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class AddIncomeExpenseDialog(QDialog):\n    def __init__(self, parent=None):\n        super(AddIncomeExpenseDialog, self).__init__(parent)\n        loadUi('ui/add_income_expense.ui', self)\n        self.add_btn.clicked.connect(self.addTransaction)\n    def addTransaction(self):\n        # İşlem ekleme mantığı\n        pass\nclass CreateCategoryDialog(QDialog):\n    def __init__(self, parent=None):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "CreateCategoryDialog",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class CreateCategoryDialog(QDialog):\n    def __init__(self, parent=None):\n        super(CreateCategoryDialog, self).__init__(parent)\n        loadUi('ui/create_category.ui', self)\n        self.add_btn.clicked.connect(self.addCategory)\n    def addCategory(self):\n        category_name = self.category_name_input.text()\n        if category_name:\n            conn = sqlite3.connect('database/budget.db')\n            cursor = conn.cursor()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "AnalysisDialog",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class AnalysisDialog(QDialog):\n    def __init__(self, parent=None):\n        super(AnalysisDialog, self).__init__(parent)\n        loadUi('ui/view_analysis.ui', self)\n        self.loadAnalysis()\n    def loadAnalysis(self):\n        # Analiz ve grafik oluşturma mantığı\n        pass\nif __name__ == \"__main__\":\n    app = QApplication(sys.argv)",
+        "detail": "main",
+        "documentation": {}
+    }
+]

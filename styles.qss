@@ -1,0 +1,25 @@
+/* Uygulama için stil dosyası */
+QMainWindow {
+    background-color: #f0f0f0;
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+QPushButton:hover {
+    opacity: 1;
+}
+
+/* Daha fazla stil ekleyebilirsiniz */
+
+
+pyuic5 -o add_income_expense_U.py add_income_expense.ui
