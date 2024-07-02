@@ -20,6 +20,3 @@ QPushButton:hover {
 }
 
 /* Daha fazla stil ekleyebilirsiniz */
-
-
-pyuic5 -o add_income_expense_U.py add_income_expense.ui

@@ -1,5 +1,14 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -41,22 +50,6 @@
         "documentation": {}
     },
     {
-        "label": "uic",
-        "importPath": "PyQt5.QtWidgets",
-        "description": "PyQt5.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PyQt5.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "loadUi",
-        "importPath": "PyQt5.uic",
-        "description": "PyQt5.uic",
-        "isExtraImport": true,
-        "detail": "PyQt5.uic",
-        "documentation": {}
-    },
-    {
         "label": "sqlite3",
         "kind": 6,
         "isExtraImport": true,
@@ -75,11 +68,139 @@
         "documentation": {}
     },
     {
+        "label": "Ui_MainWindow",
+        "importPath": "Ui_main_window",
+        "description": "Ui_main_window",
+        "isExtraImport": true,
+        "detail": "Ui_main_window",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_AddIncomeExpenseDialog",
+        "importPath": "Ui_add_income_expense",
+        "description": "Ui_add_income_expense",
+        "isExtraImport": true,
+        "detail": "Ui_add_income_expense",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_CreateCategoryDialog",
+        "importPath": "Ui_create_category",
+        "description": "Ui_create_category",
+        "isExtraImport": true,
+        "detail": "Ui_create_category",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_AnalysisDialog",
+        "importPath": "Ui_view_analysis",
+        "description": "Ui_view_analysis",
+        "isExtraImport": true,
+        "detail": "Ui_view_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtCore",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtGui",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
+        "label": "QtWidgets",
+        "importPath": "PyQt5",
+        "description": "PyQt5",
+        "isExtraImport": true,
+        "detail": "PyQt5",
+        "documentation": {}
+    },
+    {
         "label": "BudgetTracker",
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class BudgetTracker(QMainWindow):\n    def __init__(self):\n        super(BudgetTracker, self).__init__()\n        loadUi('ui/main_window.ui', self)\n        self.initUI()\n    def initUI(self):\n        self.loadCategories()\n        self.loadTransactions()\n        self.add_income_expense_btn.clicked.connect(self.showAddIncomeExpenseDialog)\n        self.create_category_btn.clicked.connect(self.showCreateCategoryDialog)",
+        "peekOfCode": "class BudgetTracker(QMainWindow, Ui_MainWindow):\n    def __init__(self):\n        super(BudgetTracker, self).__init__()\n        self.setupUi(self)\n        self.initUI()\n    def initUI(self):\n        self.loadCategories()\n        self.loadTransactions()\n        self.add_income_expense_btn.clicked.connect(self.showAddIncomeExpenseDialog)\n        self.create_category_btn.clicked.connect(self.showCreateCategoryDialog)",
         "detail": "main",
         "documentation": {}
     },
@@ -88,7 +209,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class AddIncomeExpenseDialog(QDialog):\n    def __init__(self, parent=None):\n        super(AddIncomeExpenseDialog, self).__init__(parent)\n        loadUi('ui/add_income_expense.ui', self)\n        self.add_btn.clicked.connect(self.addTransaction)\n    def addTransaction(self):\n        # İşlem ekleme mantığı\n        pass\nclass CreateCategoryDialog(QDialog):\n    def __init__(self, parent=None):",
+        "peekOfCode": "class AddIncomeExpenseDialog(QDialog, Ui_AddIncomeExpenseDialog):\n    def __init__(self, parent=None):\n        super(AddIncomeExpenseDialog, self).__init__(parent)\n        self.setupUi(self)\n        self.loadCategories()\n        self.add_btn.clicked.connect(self.addTransaction)\n    def loadCategories(self):\n        db_path = os.path.join(os.path.dirname(__file__), 'database', 'budget.db')\n        conn = sqlite3.connect(db_path)\n        cursor = conn.cursor()",
         "detail": "main",
         "documentation": {}
     },
@@ -97,7 +218,7 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class CreateCategoryDialog(QDialog):\n    def __init__(self, parent=None):\n        super(CreateCategoryDialog, self).__init__(parent)\n        loadUi('ui/create_category.ui', self)\n        self.add_btn.clicked.connect(self.addCategory)\n    def addCategory(self):\n        category_name = self.category_name_input.text()\n        if category_name:\n            conn = sqlite3.connect('database/budget.db')\n            cursor = conn.cursor()",
+        "peekOfCode": "class CreateCategoryDialog(QDialog, Ui_CreateCategoryDialog):\n    def __init__(self, parent=None):\n        super(CreateCategoryDialog, self).__init__(parent)\n        self.setupUi(self)\n        self.add_btn.clicked.connect(self.addCategory)\n    def addCategory(self):\n        category_name = self.category_name_input.text()\n        if category_name:\n            db_path = os.path.join(os.path.dirname(__file__), 'database', 'budget.db')\n            conn = sqlite3.connect(db_path)",
         "detail": "main",
         "documentation": {}
     },
@@ -106,8 +227,53 @@
         "kind": 6,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "class AnalysisDialog(QDialog):\n    def __init__(self, parent=None):\n        super(AnalysisDialog, self).__init__(parent)\n        loadUi('ui/view_analysis.ui', self)\n        self.loadAnalysis()\n    def loadAnalysis(self):\n        # Analiz ve grafik oluşturma mantığı\n        pass\nif __name__ == \"__main__\":\n    app = QApplication(sys.argv)",
+        "peekOfCode": "class AnalysisDialog(QDialog, Ui_AnalysisDialog):\n    def __init__(self, parent=None):\n        super(AnalysisDialog, self).__init__(parent)\n        self.setupUi(self)\n        self.loadAnalysis()\n    def loadAnalysis(self):\n        db_path = os.path.join(os.path.dirname(__file__), 'database', 'budget.db')\n        conn = sqlite3.connect(db_path)\n        cursor = conn.cursor()\n        cursor.execute(\"SELECT SUM(amount) FROM transactions WHERE type = 'Gelir'\")",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "initialize_database",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def initialize_database():\n    db_path = os.path.join(os.path.dirname(__file__), 'database', 'budget.db')\n    if not os.path.exists(db_path):\n        os.makedirs(os.path.dirname(db_path), exist_ok=True)\n    conn = sqlite3.connect(db_path)\n    cursor = conn.cursor()\n    cursor.execute('''\n    CREATE TABLE IF NOT EXISTS categories (\n        id INTEGER PRIMARY KEY AUTOINCREMENT,\n        name TEXT NOT NULL",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_AddIncomeExpenseDialog",
+        "kind": 6,
+        "importPath": "Ui_add_income_expense",
+        "description": "Ui_add_income_expense",
+        "peekOfCode": "class Ui_AddIncomeExpenseDialog(object):\n    def setupUi(self, AddIncomeExpenseDialog):\n        AddIncomeExpenseDialog.setObjectName(\"AddIncomeExpenseDialog\")\n        AddIncomeExpenseDialog.resize(400, 300)\n        self.centralwidget = QtWidgets.QWidget(AddIncomeExpenseDialog)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.label = QtWidgets.QLabel(self.centralwidget)\n        self.label.setGeometry(QtCore.QRect(30, 30, 100, 30))\n        self.label.setObjectName(\"label\")\n        self.category_combobox = QtWidgets.QComboBox(self.centralwidget)",
+        "detail": "Ui_add_income_expense",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_CreateCategoryDialog",
+        "kind": 6,
+        "importPath": "Ui_create_category",
+        "description": "Ui_create_category",
+        "peekOfCode": "class Ui_CreateCategoryDialog(object):\n    def setupUi(self, CreateCategoryDialog):\n        CreateCategoryDialog.setObjectName(\"CreateCategoryDialog\")\n        CreateCategoryDialog.resize(400, 200)\n        self.centralwidget = QtWidgets.QWidget(CreateCategoryDialog)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.label = QtWidgets.QLabel(self.centralwidget)\n        self.label.setGeometry(QtCore.QRect(30, 30, 100, 30))\n        self.label.setObjectName(\"label\")\n        self.category_name_input = QtWidgets.QLineEdit(self.centralwidget)",
+        "detail": "Ui_create_category",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_MainWindow",
+        "kind": 6,
+        "importPath": "Ui_main_window",
+        "description": "Ui_main_window",
+        "peekOfCode": "class Ui_MainWindow(object):\n    def setupUi(self, MainWindow):\n        MainWindow.setObjectName(\"MainWindow\")\n        MainWindow.resize(800, 600)\n        self.centralwidget = QtWidgets.QWidget(MainWindow)\n        self.centralwidget.setObjectName(\"centralwidget\")\n        self.add_income_expense_btn = QtWidgets.QPushButton(self.centralwidget)\n        self.add_income_expense_btn.setGeometry(QtCore.QRect(30, 30, 200, 50))\n        self.add_income_expense_btn.setObjectName(\"add_income_expense_btn\")\n        self.create_category_btn = QtWidgets.QPushButton(self.centralwidget)",
+        "detail": "Ui_main_window",
+        "documentation": {}
+    },
+    {
+        "label": "Ui_AnalysisDialog",
+        "kind": 6,
+        "importPath": "Ui_view_analysis",
+        "description": "Ui_view_analysis",
+        "peekOfCode": "class Ui_AnalysisDialog(object):\n    def setupUi(self, AnalysisDialog):\n        AnalysisDialog.setObjectName(\"AnalysisDialog\")\n        AnalysisDialog.resize(600, 400)\n        self.label = QtWidgets.QLabel(AnalysisDialog)\n        self.label.setGeometry(QtCore.QRect(30, 30, 100, 30))\n        self.label.setObjectName(\"label\")\n        self.analysis_table = QtWidgets.QTableWidget(AnalysisDialog)\n        self.analysis_table.setGeometry(QtCore.QRect(30, 80, 540, 250))\n        self.analysis_table.setObjectName(\"analysis_table\")",
+        "detail": "Ui_view_analysis",
         "documentation": {}
     }
 ]

@@ -5,7 +5,7 @@
   <property name="geometry">
    <rect>
     <x>0</x>
-    <y>0</x>
+    <y>0</y>
     <width>600</width>
     <height>400</height>
    </rect>
@@ -13,30 +13,38 @@
   <property name="windowTitle">
    <string>Analiz Görüntüle</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>30</x>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Analiz:</string>
-    </property>
-   </widget>
-   <widget class="QTableWidget" name="analysis_table">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>80</x>
-      <width>540</width>
-      <height>250</height>
-     </rect>
-    </property>
-   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Analiz:</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="analysis_table">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>540</width>
+     <height>250</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="analysis_result">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>540</width>
+     <height>50</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>
